@@ -1,4 +1,4 @@
-# UTS PemWeb - Game Database 🎮 (123140045)
+# Praktikum PemWeb 3 - Game Database 🎮 (123140045)
 
 **Studi Kasus:** Digit 5 - Game Database
 
