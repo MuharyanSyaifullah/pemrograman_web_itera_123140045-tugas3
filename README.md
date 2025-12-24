@@ -1,73 +1,116 @@
-# React + TypeScript + Vite
+# 📚 Aplikasi Manajemen Buku Pribadi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplikasi Manajemen Buku Pribadi adalah aplikasi web berbasis React yang digunakan untuk mengelola daftar buku secara sederhana.  
+Aplikasi ini dibuat untuk memenuhi **Tugas 3 Praktikum Pemrograman Web**.
 
-Currently, two official plugins are available:
+Pengguna dapat menambahkan, mengedit, menghapus, memfilter, dan mencari buku berdasarkan judul atau penulis.  
+Data disimpan secara lokal menggunakan **localStorage**, sehingga tidak hilang saat halaman direfresh.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 👤 Identitas Mahasiswa
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Nama  : Muharyan Syaifullah  
+NIM   : 123140045  
+Kelas : RB  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Teknologi yang Digunakan
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React (Functional Components)
+- Vite
+- React Router DOM
+- Context API
+- localStorage
+- CSS (Custom Dark Theme)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Fitur Aplikasi
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Menambahkan buku (judul, penulis, dan status)
+- Mengedit data buku
+- Menghapus buku
+- Filter buku berdasarkan status:
+  - Sedang dibaca
+  - Selesai
+- Pencarian buku berdasarkan judul atau penulis (debounce)
+- Navigasi halaman tanpa reload (Single Page Application)
+- Tampilan dark mode modern
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧠 Konsep React yang Diterapkan
+
+- useState  
+- useEffect  
+- useContext  
+- Custom Hooks (useLocalStorage, useDebounce)  
+- Context API  
+- React Router  
+- Controlled Components  
+- Conditional Rendering  
+
+---
+
+## 📂 Struktur Folder
+
+src/  
+├── components/  
+│   ├── BookForm.jsx  
+│   ├── BookItem.jsx  
+│   ├── BookList.jsx  
+│   ├── Container.jsx  
+│   ├── FilterBar.jsx  
+│   ├── NavBar.jsx  
+│   └── SearchBar.jsx  
+├── pages/  
+│   ├── HomePage.jsx  
+│   ├── AddBookPage.jsx  
+│   ├── EditBookPage.jsx  
+│   └── NotFoundPage.jsx  
+├── context/  
+│   └── BookContext.jsx  
+├── hooks/  
+│   ├── useLocalStorage.js  
+│   └── useDebounce.js  
+├── App.jsx  
+├── App.css  
+└── main.jsx  
+
+---
+
+## ⚙️ Cara Menjalankan Aplikasi
+
+1. Clone repository  
+git clone https://github.com/MuharyanSyaifullah/pemrograman_web_itera_123140045-tugas3.git  
+
+2. Masuk ke folder project  
+cd pemrograman_web_itera_123140045-tugas3  
+
+3. Install dependency  
+npm install  
+
+4. Jalankan aplikasi  
+npm run dev  
+
+5. Buka di browser  
+http://localhost:5173  
+
+---
+
+## 📝 Catatan
+
+- Aplikasi ini tidak menggunakan backend atau database eksternal
+- Seluruh data disimpan menggunakan localStorage
+- Aplikasi bersifat Single Page Application (SPA)
+
+---
+
+## 📌 Kesimpulan
+
+Aplikasi Manajemen Buku Pribadi ini dibuat dengan menerapkan konsep dasar React seperti hooks, context, dan routing.  
+Aplikasi ini membantu pengguna dalam mengelola daftar buku pribadi secara sederhana, efektif, dan mudah digunakan.
+
+Terima kasih.
